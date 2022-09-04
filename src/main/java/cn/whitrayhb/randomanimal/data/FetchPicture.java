@@ -21,9 +21,6 @@ public class FetchPicture {
         int size;
         String[] arrUrl = inUrl.split("/");
         String name = arrUrl[arrUrl.length-1];
-        if(new File(path+"/"+name).exists()){
-            return path+"/"+name;
-        }
         try{
             URL url = new URL(inUrl);
             httpUrl = (HttpURLConnection) url.openConnection();
